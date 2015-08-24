@@ -73,3 +73,7 @@ var socket = io();
     });
 ```
 
+And here is the wonderful output
+
+![Client](/images/clientUI.png)
+
