@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+<body>
+  <h1>Hello, World!</h1>
+  <ul id="messages">
+  </ul>
+  <h2>Count To</h2>
+  <form action="">
+    <input id="m" autocomplete="off" /><button>Send</button>
+  </form>
+  <h2>Computation</h2>
+  <ul id="nums"></ul>
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    var socket = io();
+    socket.on('chat message', function (msg) {
+        $('#messages').append($('<li>').text(msg));
+    });
+
+    socket.on('data', function (d) {
+        t = JSON.parse(d)
+        $('#nums').append($('<li>').text(t.data));
+    });
+
+    $('form').submit(function(){
+        socket.emit('chat message', $('#m').val());
+        $('#m').val('');
+        return false;
+    });
+  </script>
+</body>
+</html

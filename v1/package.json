@@ -1,0 +1,23 @@
+{
+  "name": "auto_stat",
+  "version": "1.0.0",
+  "description": "an automatic python statistician",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "python"
+  ],
+  "author": "Jonah Williams",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint-plugin-react": "^3.2.3"
+  },
+  "dependencies": {
+    "express": "^4.13.3",
+    "socket.io": "^1.3.6"
+  }
+}

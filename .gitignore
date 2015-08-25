@@ -58,3 +58,6 @@ target/
 
 # Mac Stuff
 *.DS_Config
+
+node stuff
+*/node_modules
